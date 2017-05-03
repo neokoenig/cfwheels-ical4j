@@ -1,0 +1,22 @@
+{
+    "name":"CFWheels iCal4j",
+    "version":"0.0.0",
+    "author":"Tom King",
+    "location":"neokoenig/cfwheels-ical4j#v0.0.0",
+    "directory":"/plugins/",
+    "createPackageDirectory":true,
+    "packageDirectory":"ical4j",
+    "slug":"cfwheels-ical4j",
+    "type":"cfwheels-plugins",
+    "homepage":"https://github.com/neokoenig/cfwheels-ical4j",
+    "shortDescription":"CFWheels 2.x Plugin Date Repeats Methods via iCal4J Java Lib",
+    "keywords":"iCal",
+    "private":false,
+    "scripts":{
+        "postVersion":"package set location='neokoenig/cfwheels-ical4j#v`package version`'",
+        "postPublish":"!git push --follow-tags",
+        "patch-release":"bump --patch && publish",
+        "minor-release":"bump --minor && publish",
+        "major-release":"bump --major && publish"
+    }
+}
