@@ -1,0 +1,27 @@
+language: java
+sudo: required
+jdk:
+  - oraclejdk8
+before_install:
+  # Get Commandbox
+  - sudo apt-key adv --keyserver keys.gnupg.net --recv 6DA70622
+  - sudo echo "deb http://downloads.ortussolutions.com/debs/noarch /" | sudo tee -a /etc/apt/sources.list.d/commandbox.list
+install:
+  # Install Commandbox
+  - sudo apt-get update && sudo apt-get --assume-yes install commandbox
+  # Check it's working
+  - box version
+  # Install CLI
+  - box install cfwheels-cli
+  # Install Master Branch
+  - box install cfwheels/cfwheels
+  # Install the Plugin
+  - box install cfwheels-ical4j
+before_script:
+  - box server start
+script: >
+  testResults="$(box wheels test type=ical4j servername=cfwheels)";
+  echo "$testResults";
+  if ! grep -i "\Tests Complete: All Good!" <<< $testResults;  then exit 1; fi
+notifications:
+    email: false
