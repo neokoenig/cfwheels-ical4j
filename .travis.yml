@@ -26,4 +26,4 @@ script: >
   echo "$testResults";
   if ! grep -i "\Tests Complete: All Good!" <<< $testResults;  then exit 1; fi
 notifications:
-    email: false
+    email: true
