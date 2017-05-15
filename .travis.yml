@@ -11,12 +11,12 @@ install:
   - sudo apt-get update && sudo apt-get --assume-yes install commandbox
   # Check it's working
   - box version
-  # Install CLI
+  # Install CLI: needed to repackage the plugin to a zip on install
   - box install cfwheels-cli
   # Install Master Branch; nb, installed into folder of the git repo name, i.e neokoenig/cfwheels-ical4j
   - box install cfwheels/cfwheels
-  # Install the Plugin
-  - box install cfwheels-ical4j
+  # Install the Plugin: use gitHub path to get the absolute latest
+  - box install neokoenig/cfwheels-ical4j
 before_script:
   # Master branch has a bunch of server.jsons we can use: lucee4 | lucee5 | cf10 | cf11 | cf2016
   - box server start lucee5
