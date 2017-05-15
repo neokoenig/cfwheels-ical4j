@@ -1,5 +1,7 @@
 # cfwheels-ical4j
 
+[![Build Status](https://travis-ci.org/neokoenig/cfwheels-ical4j.svg?branch=master)](https://travis-ci.org/neokoenig/cfwheels-ical4j)
+
 CFWheels Plugin Date Repeats Methods via iCal4J Java Lib
 
 Use to create repeating date ranges against the iCal standard; Note this plugin doesn't try to be an entire iCal wrapper - this is just to get the RRULE logic.
