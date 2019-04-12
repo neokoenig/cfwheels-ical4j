@@ -1,8 +1,8 @@
 {
     "name":"CFWheels iCal4j",
-    "version":"1.0.3",
+    "version":"2.0.0",
     "author":"Tom King",
-    "location":"neokoenig/cfwheels-ical4j#v1.0.3",
+    "location":"neokoenig/cfwheels-ical4j#v2.0.0",
     "directory":"/plugins/",
     "createPackageDirectory":true,
     "packageDirectory":"ical4j",
